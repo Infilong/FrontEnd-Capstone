@@ -1,38 +1,487 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  background-color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+nav img {
+  display: flex;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul {
+  list-style: none;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin-right: 10px;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+footer {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer img {
+  padding: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding: 20px;
+  justify-content: inline-block;
+}
+
+.footer-container li {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+.body-flex-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  background-color: #495e57;
+  min-height: 650px;
+  
+}
+
+@media (max-width: 900px) {
+  .body-flex-container {
+    column-count: 1;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 900px) {
+  .body-flex-container {
+    column-count: 2;
+  }
+}
+
+.box {
+  text-align: left;
+  margin-right: 10px;
+  padding: 10px;
+  overflow: scroll;
+}
+
+@media (max-width: 900px) {
+  .box {
+    margin: 10px 0px 10px 10px;
+  }
+}
+
+.box > h1 {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  color: #f4ce14;
+}
+
+.box > h3 {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.box > p {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  max-width: 500px;
+  color: #ffffff;
+}
+
+button {
+  background: #f4ce14;
+  border-radius: 20px;
+  font-size: medium;
+  font-weight: 800;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  button {
+    width: 100px;
+    height: 30px;
+    font-size: small;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 900px) {
+  button {
+    width: 200px;
+    height: 60px;
+    font-size: medium;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 900px) {
+  #reserveTableButton {
+    margin: 10px 0px 0px 0px;
+  }
+}
+
+@media (min-width: 900px) {
+  #reserveTableButton {
+    margin: 100px 0px 0px 0px;
+  }
+}
+
+#coverImage {
+  border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  #coverImage {
+    width: 135px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 900px) {
+  #coverImage {
+    width: 270px;
+    height: 500px;
+  }
+}
+
+.grid-container {
+  display: grid;
+  align-items: center;
+  margin-bottom: 100px;
+  grid-template-rows: 0.5fr 1fr; /* Creates 2 rows */
+  grid-template-columns: 1fr 0.5fr 1fr; /* Creates 3 columns */
+  grid-template-areas:
+    "title empty button" /* Assigns the first two columns to this area */
+    "dish1 dish2 dish3"; /* Assigns the next three columns to this area */
+}
+
+/* When screen size below 900px, change grid */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr; /* Creates 5 rows */
+    grid-template-columns: 1fr; /* Creates 1 columns */
+    grid-template-areas: "title" "button" "dish1" "dish2" "dish3";
+  }
+}
+
+.grid-title {
+  grid-area: title;
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  color: black;
+  margin: 70px 20px 20px 20px;
+}
+
+@media (max-width: 900px) {
+  .grid-title {
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-title {
+    text-align: right;
+  }
+}
+
+.grid-button {
+  grid-area: button;
+}
+
+@media (max-width: 900px) {
+  .grid-button {
+    justify-self: center;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-button {
+    justify-self: start;
+    margin-top: 70px;
+  }
+}
+
+.grid-container > .specialCard {
+  margin: 10px;
+  max-width: 273px;
+  height: fit-content;
+  background: #edefee;
+  border-radius: 8px;
+}
+
+.specialCard > img {
+  width: 273px;
+  height: 136px;
+  border-radius: 8px;
+}
+
+.specialCard > .name {
+  font-family: "Markazi Text";
+  padding: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  display: inline-block;
+  align-items: center;
+  color: #000000;
+  margin: 0 120px 0 0;
+}
+
+.specialCard > .deliveryTag {
+  padding: 10px;
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 10px 0 10px 0;
+}
+
+.specialCard > .price {
+  display: inline-block;
+  padding: 10px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: right;
+  color: #ee9972;
+}
+
+.specialCard > p {
+  padding: 10px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  color: #000000;
+  margin: 5px;
+}
+
+#specialCard1 {
+  grid-area: dish1;
+}
+
+@media (max-width: 900px) {
+  #specialCard1 {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 900px) {
+  #specialCard1 {
+    justify-self: end;
+  }
+}
+
+#specialCard2 {
+  grid-area: dish2;
+  justify-self: center;
+}
+
+#specialCard3 {
+  grid-area: dish3;
+}
+
+@media (max-width: 900px) {
+  #specialCard3 {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 900px) {
+  #specialCard3 {
+    justify-self: start;
+  }
+}
+
+.ratingCardContainer {
+  flex-wrap: wrap;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+}
+
+.ratingCardContainer > h3 {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.ratingCard {
+  display: grid;
+  align-items: flex-start;
+  grid-template-rows: 0.5fr 1fr 0.5fr; /* Creates 3 rows */
+  grid-template-columns: 0.5fr 1fr 0.5fr; /* Creates 3 columns */
+  grid-template-areas:
+    "Rating Rating Rating"
+    "Pic Pic Name"
+    "Review Review Review";
+  background: #ede5e5;
+  height: 178px;
+  width: 204px;
+  padding: 10px;
+  margin: 10px 20px 50px 20px;
+}
+
+.ratingCard > .rating {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 5px;
+  color: #000000;
+  grid-area: Rating;
+}
+
+.ratingCard > .ratingPic {
+  position: relative;
+  height: 64px;
+  width: 64px;
+  margin: 0px 10px 5px 10px;
+  grid-area: Pic;
+  align-items: flex-start;
+  border: 1px solid #000000;
+}
+
+.ratingCard > .ratingName {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  grid-area: Name;
+  margin: 25px 10px 0 5px;
+  align-items: center;
+  color: #000000;
+}
+
+.ratingCard > .ratingReview {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  grid-area: Review;
+  margin: 5px;
+  align-items: flex-end;
+  color: #000000;
+}
+
+.img1 {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  margin: 10px;
+  overflow: scroll;
+  
+}
+.img2 {
+  
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  margin: 10px;
+  overflow: scroll;
+}
+
+@media (max-width: 900px) {
+  .img1 {
+    top: 0px;
+  }
+}
+
+@media (min-width: 900px) {
+  .img1 {
+    top: 50px;
+    left: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .img2 {
+    top: 50px;
+    left: -100px;
+  }
+}
+
+@media (min-width: 900px) {
+  .img2 {
+    top: 100px;
+    left: 50px;
+  }
+}
+
+#infoImage {
+  border-radius: 20px;
+  flex-flow: wrap;
+}
+
+@media (max-width: 900px) {
+  #infoImage {
+    width: 135px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 900px) {
+  #infoImage {
+    width: 270px;
+    height: 500px;
   }
 }

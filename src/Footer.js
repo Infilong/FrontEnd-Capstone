@@ -1,34 +1,58 @@
 import React from "react";
+import logo from "./Images/littleLemonLogo.png";
 
-function Footer(props) {
+const DoormatNavigation = [
+  { text: "Home", href: "/home" },
+  { text: "About", href: "/about" },
+  { text: "Contact", href: "/contact" },
+  { text: "Reservations", href: "/reservations" },
+  { text: "Order Online", href: "/order-online" },
+  { text: "Login", href: "/login" },
+];
+
+const Contact = [
+  { text: "Address", href: "/address" },
+  { text: "Phone Number", href: "/phone" },
+  { text: "Email", href: "/email" },
+];
+
+const SocialMedia = [
+  { text: "Address", href: "/address" },
+  { text: "Phone Number", href: "/phone" },
+  { text: "Email", href: "/email" },
+];
+
+function Footer() {
   return (
-    <>
-      <footer>
-        <div class="footer-column">
+    <footer>
+      <img src={logo} alt="little lemon logo"></img>
+      <div className="footer-container">
+        <ul>
           <h3>Doormat Navigation</h3>
-          <ul>
-            <li>
-              <a href="/home">Home</a>
+          {DoormatNavigation.map((link) => (
+            <li key={link.text}>
+              <a href={link.href}>{link.text}</a>
             </li>
-            <li>
-              <a href="/about">About</a>
+          ))}
+        </ul>
+        <ul>
+          <h3>Contact</h3>
+          {Contact.map((link) => (
+            <li key={link.text}>
+              <a href={link.href}>{link.text}</a>
             </li>
-            <li>
-              <a href="/contact">Contact</a>
+          ))}
+        </ul>
+        <ul>
+          <h3>Social Media</h3>
+          {SocialMedia.map((link) => (
+            <li key={link.text}>
+              <a href={link.href}>{link.text}</a>
             </li>
-            <li>
-              <a href="/reservations">Reservations</a>
-            </li>
-            <li>
-              <a href="/order">Order Online</a>
-            </li>
-            <li>
-              <a href="/login">Login</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </>
+          ))}
+        </ul>
+      </div>
+    </footer>
   );
 }
 

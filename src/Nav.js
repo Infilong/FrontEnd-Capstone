@@ -1,31 +1,31 @@
 import React from "react";
+import "./App.css";
+import logo from "./Images/littleLemonLogo.png";
 
-function Nav(props) {
+const NavLinks = [
+  { text: "Home", href: "/home" },
+  { text: "About", href: "/about" },
+  { text: "Contact", href: "/contact" },
+  { text: "Reservations", href: "/reservations" },
+  { text: "Order Online", href: "/order-online" },
+  { text: "Login", href: "/login" },
+];
+
+function Nav() {
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <a href="/home">Home</a>
+    <nav>
+      <img src={logo} alt="little lemon logo"></img>
+      <ul>
+        {/* Use a map function to generate the list items and anchor tags */}
+        {NavLinks.map((link) => (
+          <li key={link.text}>
+            <a href={link.href}>
+              {link.text}
+            </a>
           </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <a href="/reservations">Reservations</a>
-          </li>
-          <li>
-            <a href="/order">Order Online</a>
-          </li>
-          <li>
-            <a href="/login">Login</a>
-          </li>
-        </ul>
-      </nav>
-    </>
+        ))}
+      </ul>
+    </nav>
   );
 }
 
