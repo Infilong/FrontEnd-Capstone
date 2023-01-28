@@ -67,6 +67,10 @@ footer a {
   color: #333;
 }
 
+a {
+  color: black;
+}
+
 .body-flex-container {
   display: flex;
   flex-flow: wrap;
@@ -472,14 +476,14 @@ button {
   flex-flow: wrap;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   #infoImage {
     width: 135px;
     height: 250px;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   #infoImage {
     width: 270px;
     height: 500px;

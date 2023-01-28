@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./Images/littleLemonLogo.png";
+import logo from "../images/littleLemonLogo.png";
 
 const DoormatNavigation = [
   { text: "Home", href: "/home" },
