@@ -77,7 +77,6 @@ a {
   justify-content: center;
   background-color: #495e57;
   min-height: 650px;
-  
 }
 
 @media (max-width: 900px) {
@@ -433,10 +432,8 @@ button {
   padding: 10px;
   margin: 10px;
   overflow: scroll;
-  
 }
 .img2 {
-  
   position: relative;
   z-index: 2;
   padding: 10px;
@@ -488,4 +485,62 @@ button {
     width: 270px;
     height: 500px;
   }
+}
+
+form {
+  display: grid;
+  padding: 5%;
+  grid-template-rows: 50px;
+  max-width: 800px;
+  height: 500px;
+  gap: 5px;
+  margin: 5px;
+  text-align: start;
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-size: 32px;
+  color: #f4ce14;
+}
+
+form > input,
+form > select {
+  border-radius: 10px;
+  padding: 0 0 0 10px;
+}
+
+form > label {
+  height: fit-content;
+  padding: 5px 0 0 0;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1; 
+}
+
+#submit {
+  display: grid;
+  padding: 10px;
+  width: 80%;
+  background: #f4ce14;
+  text-align: center;
+  height: 50px;
+  margin: 50px 10% 50px 10%;
+  align-items: center;
+  border-radius: 20px;
+  font-size: medium;
+  font-weight: 800;
+  border: none;
+}
+
+#confirmation {
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 150px;
+  text-align: center;
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  color: #f4ce14;
 }
