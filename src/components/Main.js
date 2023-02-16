@@ -36,9 +36,8 @@ function Main() {
     setAvailableTimes(fetchAPI(new Date(date)));
   }, [date]);
 
-  const submitForm = (e) => {
-    e.preventDefault();
-    setFormData(e.target.elements);
+  const submitForm = (values) => {
+    setFormData(values);
     if (submitAPI(formData)) {
       setFormSubmitted(true);
     }

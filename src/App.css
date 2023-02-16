@@ -490,11 +490,8 @@ button {
 form {
   display: grid;
   padding: 5%;
-  grid-template-rows: 50px;
-  max-width: 800px;
-  height: 500px;
-  gap: 5px;
-  margin: 5px;
+  grid-template-rows: auto;
+  gap: 0.5em;
   text-align: start;
   font-family: "Markazi Text";
   font-style: normal;
@@ -506,6 +503,8 @@ form > input,
 form > select {
   border-radius: 10px;
   padding: 0 0 0 10px;
+  margin: 0 0 10px 0;
+  height: 40px;
 }
 
 form > label {
@@ -515,7 +514,7 @@ form > label {
 
 ::placeholder {
   color: black;
-  opacity: 1; 
+  opacity: 1;
 }
 
 #submit {
@@ -543,4 +542,10 @@ form > label {
   font-weight: 500;
   font-size: 64px;
   color: #f4ce14;
+}
+
+.error {
+  font-size: 0.9rem;
+  color: red;
+  display: block;
 }
