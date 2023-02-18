@@ -164,6 +164,7 @@ function BookingForm({ setDate, availableTimes, submitForm }) {
             value="Make Your Reservation"
             className="submit"
             disabled={isSubmitting}
+            aria-label="On Click"
           />
         </form>
       )}

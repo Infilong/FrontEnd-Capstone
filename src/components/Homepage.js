@@ -25,8 +25,10 @@ function Homepage() {
               char-grilled, crispy asparagus, topped with a tangy golden-brown
               glaze for a meal hard to forget.
             </p>
-            <button id="reserveTableButton">
-              <Link to="/booking" style={{ textDecoration: 'none' }}>Reserve Table</Link>
+            <button id="reserveTableButton" aria-label="On Click">
+              <Link to="/booking" style={{ textDecoration: "none" }}>
+                Reserve Table
+              </Link>
             </button>
           </div>
 
@@ -42,8 +44,10 @@ function Homepage() {
       <section>
         <div className="grid-container">
           <h1 className="grid-title">Specials</h1>
-          <button className="grid-button">
-            <Link to="/booking" style={{ textDecoration: 'none'}}>Reserve Table</Link>
+          <button className="grid-button" aria-label="On Click">
+            <Link to="/booking" style={{ textDecoration: "none" }}>
+              Reserve Table
+            </Link>
           </button>
 
           {specialCardData.map((item, num) => (

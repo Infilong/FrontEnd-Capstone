@@ -16,24 +16,31 @@ function Login() {
           <h1>Login</h1>
           <h3>Please enter your username and password</h3>
           <form onSubmit={handleSubmit}>
-            <label>Username: </label>
+            <label htmlFor="username">Username: </label>
             <input
               className="userInfo"
               type="text"
+              id="username"
               value={username}
               placeholder="Username"
               onChange={(event) => setUsername(event.target.value)}
             />
 
-            <label>Password:</label>
+            <label htmlFor="password">Password:</label>
             <input
               className="userInfo"
               type="password"
+              id="password"
               value={password}
               placeholder="Password"
               onChange={(event) => setPassword(event.target.value)}
             />
-            <input type="submit" value="Login" className="submit" />
+            <input
+              type="submit"
+              value="Login"
+              className="submit"
+              aria-label="On Click"
+            />
           </form>
         </div>
       </div>

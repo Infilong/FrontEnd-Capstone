@@ -17,18 +17,20 @@ function Contact() {
           <h1>Contact Us</h1>
           <h3>Please enter your name, email and message</h3>
           <form onSubmit={handleSubmit}>
-            <label>Name: </label>
+            <label htmlFor="username">Name: </label>
             <input
               className="userInfo"
               type="text"
               value={name}
               placeholder="Username"
+              id="username"
               onChange={(event) => setName(event.target.value)}
             />
 
-            <label>Email: </label>
+            <label htmlFor="email">Email: </label>
             <input
               className="userInfo"
+              id="email"
               type="email"
               value={email}
               placeholder="Email"
@@ -47,6 +49,7 @@ function Contact() {
               type="submit"
               value="Send Message"
               className="submit"
+              aria-label="On Click"
             ></input>
           </form>
         </div>
