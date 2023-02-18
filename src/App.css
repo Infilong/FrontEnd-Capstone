@@ -73,6 +73,7 @@ a {
 
 .body-flex-container {
   display: flex;
+  flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
   background-color: #495e57;
@@ -517,7 +518,30 @@ form > label {
   opacity: 1;
 }
 
-#submit {
+.userInfo::placeholder {
+  color: black;
+  opacity: 0.3;
+}
+
+.userInfo > input {
+  border-radius: 10px;
+  padding: 0 0 0 10px;
+  margin: 0 0 10px 0;
+  height: 40px;
+}
+
+.userInfo > button {
+  place-items: center;
+}
+
+textarea {
+  border-radius: 10px;
+  height: 200px;
+  font-size: 0.5em;
+  overflow: scroll;
+}
+
+.submit {
   display: grid;
   padding: 10px;
   width: 80%;
@@ -530,18 +554,6 @@ form > label {
   font-size: medium;
   font-weight: 800;
   border: none;
-}
-
-#confirmation {
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 150px;
-  text-align: center;
-  font-family: "Markazi Text";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 64px;
-  color: #f4ce14;
 }
 
 .error {

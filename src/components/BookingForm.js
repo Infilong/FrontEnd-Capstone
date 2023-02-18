@@ -162,7 +162,7 @@ function BookingForm({ setDate, availableTimes, submitForm }) {
           <input
             type="submit"
             value="Make Your Reservation"
-            id="submit"
+            className="submit"
             disabled={isSubmitting}
           />
         </form>
