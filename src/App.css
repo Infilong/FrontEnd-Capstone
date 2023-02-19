@@ -78,6 +78,7 @@ a {
   justify-content: center;
   background-color: #495e57;
   min-height: 650px;
+  height: fit-content;
 }
 
 @media (max-width: 900px) {
@@ -96,7 +97,6 @@ a {
   text-align: left;
   margin-right: 10px;
   padding: 10px;
-  overflow: scroll;
 }
 
 @media (max-width: 900px) {
@@ -247,48 +247,44 @@ button {
 }
 
 .grid-container > .specialCard {
-  margin: 10px;
+  margin: 50px;
   max-width: 273px;
-  height: fit-content;
+  height: 450px;
   background: #edefee;
   border-radius: 8px;
 }
 
-.specialCard > img {
+.specialCard img {
   width: 273px;
   height: 136px;
   border-radius: 8px;
 }
 
-.specialCard > .name {
-  font-family: "Markazi Text";
-  padding: 10px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  display: inline-block;
+.specialCard .name-and-price {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  color: #000000;
-  margin: 0 120px 0 0;
+  width: 100%;
 }
 
-.specialCard > .deliveryTag {
-  padding: 10px;
+.specialCard .name {
+  display: flex;
   font-family: "Markazi Text";
+  margin: 0 0 0 0;
+  padding: 10px 0 0 10px;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   display: flex;
-  align-items: center;
   color: #000000;
-  margin: 10px 0 10px 0;
 }
 
-.specialCard > .price {
-  display: inline-block;
-  padding: 10px;
+.specialCard .price {
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+  padding: 10px 10px 0 0;
   font-family: "Karla";
   font-style: normal;
   font-weight: 500;
@@ -299,7 +295,21 @@ button {
   color: #ee9972;
 }
 
-.specialCard > p {
+.specialCard .deliveryTag {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin: 10px 0 10px 0;
+}
+
+.specialCard p {
   padding: 10px;
   font-family: "Karla";
   font-style: normal;
@@ -374,10 +384,15 @@ button {
     "Pic Pic Name"
     "Review Review Review";
   background: #ede5e5;
-  height: 178px;
+  height: 230px;
   width: 204px;
   padding: 10px;
   margin: 10px 20px 50px 20px;
+  overflow: hidden;
+}
+
+.ratingCard:hover{
+  overflow-y: auto;
 }
 
 .ratingCard > .rating {
@@ -450,21 +465,21 @@ button {
 
 @media (min-width: 900px) {
   .img1 {
-    top: 50px;
+    top: 20px;
     left: 200px;
   }
 }
 
 @media (max-width: 900px) {
   .img2 {
-    top: 50px;
-    left: -100px;
+    top: 0px;
+    left: 0px;
   }
 }
 
 @media (min-width: 900px) {
   .img2 {
-    top: 100px;
+    top: 50px;
     left: 50px;
   }
 }
@@ -538,7 +553,11 @@ textarea {
   border-radius: 10px;
   height: 200px;
   font-size: 0.5em;
-  overflow: scroll;
+  overflow: hidden;
+}
+
+textarea:hover {
+  overflow: auto;
 }
 
 .submit {

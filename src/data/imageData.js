@@ -24,7 +24,7 @@ const data = [
   {
     dish: dish2,
     alt: "Roasted duck",
-    name: "Roasted duck",
+    name: "Roasted Duck",
     price: "$50",
     description:
       "Introducing our delicious Roasted Duck! This dish features a succulent and flavorful duck that has been slow-roasted to perfection. The duck is seasoned with a blend of spices and herbs before being cooked, giving it a unique and delicious flavor. It is served with a side of crispy and golden-brown potatoes and a medley of seasonal vegetables, making this dish a perfect choice for a special occasion or a hearty and satisfying meal.",
@@ -32,7 +32,7 @@ const data = [
   {
     dish: dish3,
     alt: "Roasted goat",
-    name: "Roasted goat",
+    name: "Roasted Goat",
     price: "$60",
     description:
       "Roasted Goat, this dish is made from tender and juicy goat meat that has been marinated in a blend of spices, herbs and citrus juice, before being slow-roasted to achieve a perfect balance of flavors. The meat is served with a side of creamy mashed potatoes and a selection of seasonal vegetables, making this dish a perfect choice for those looking for a unique and hearty meal. This dish is perfect for meat lovers, who are looking for a different and rich flavors.",

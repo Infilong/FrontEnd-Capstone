@@ -33,7 +33,7 @@ function Homepage() {
           </div>
 
           <img
-            className="box"
+          className="img1"
             src={imageData[0].dish}
             alt={imageData[0].alt}
             id="coverImage"
@@ -88,18 +88,20 @@ function Homepage() {
             <h3>Chicago</h3>
             <p>Little Lemon is a brand of Little Lemon Corporation.Inc</p>
           </div>
-          <img
-            className="img1"
-            src={imageData[4].dish}
-            alt={imageData[4].alt}
-            id="infoImage"
-          />
-          <img
-            className="img2"
-            src={imageData[5].dish}
-            alt={imageData[5].alt}
-            id="infoImage"
-          />
+          <div>
+            <img
+              className="img1"
+              src={imageData[4].dish}
+              alt={imageData[4].alt}
+              id="infoImage"
+            />
+            <img
+              className="img2"
+              src={imageData[5].dish}
+              alt={imageData[5].alt}
+              id="infoImage"
+            />
+          </div>
         </div>
       </section>
     </>

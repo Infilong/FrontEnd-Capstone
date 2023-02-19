@@ -6,8 +6,10 @@ function SpecialCard({ id, ...props }) {
   return (
     <div className="specialCard" id={id}>
       <img src={props.dish} alt={props.alt}></img>
-      <h5 className="name">{props.name}</h5>
-      <span className="price">{props.price}</span>
+      <div className="name-and-price">
+        <div className="name">{props.name}</div>
+        <div className="price">{props.price}</div>
+      </div>
       <p>{props.description}</p>
       <h5 className="deliveryTag">Order & Delivery</h5>
     </div>
