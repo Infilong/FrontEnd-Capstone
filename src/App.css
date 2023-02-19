@@ -247,6 +247,7 @@ button {
 }
 
 .grid-container > .specialCard {
+  position: relative;
   margin: 50px;
   max-width: 273px;
   height: 450px;
@@ -307,10 +308,15 @@ button {
   line-height: 22px;
   color: #000000;
   margin: 10px 0 10px 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 .specialCard p {
   padding: 10px;
+  max-height: 200px;
+  overflow: hidden;
   font-family: "Karla";
   font-style: normal;
   font-weight: 400;
@@ -318,6 +324,10 @@ button {
   line-height: 15px;
   color: #000000;
   margin: 5px;
+}
+
+.specialCard p:hover {
+  overflow: auto;
 }
 
 #specialCard1 {
@@ -391,7 +401,7 @@ button {
   overflow: hidden;
 }
 
-.ratingCard:hover{
+.ratingCard:hover {
   overflow-y: auto;
 }
 

@@ -11,7 +11,7 @@ function SpecialCard({ id, ...props }) {
         <div className="price">{props.price}</div>
       </div>
       <p>{props.description}</p>
-      <h5 className="deliveryTag">Order & Delivery</h5>
+      <div className="deliveryTag">Order & Delivery</div>
     </div>
   );
 }

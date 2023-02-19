@@ -35,7 +35,7 @@ const data = [
     name: "Roasted Goat",
     price: "$60",
     description:
-      "Roasted Goat, this dish is made from tender and juicy goat meat that has been marinated in a blend of spices, herbs and citrus juice, before being slow-roasted to achieve a perfect balance of flavors. The meat is served with a side of creamy mashed potatoes and a selection of seasonal vegetables, making this dish a perfect choice for those looking for a unique and hearty meal. This dish is perfect for meat lovers, who are looking for a different and rich flavors.",
+      "Roasted goat, also known as cabrito or kid goat, is a popular and delicious meat dish that is enjoyed in many parts of the world. The dish is particularly popular in Latin America, where it is often served at festive occasions and family gatherings.Roasted goat is typically made by marinating and then roasting a young goat in a wood-fired oven or on a spit. The meat is often seasoned with a blend of herbs and spices, which can vary depending on the region and the cook's personal preferences.The result is a tender and flavorful meat that is rich in protein and low in fat. Roasted goat has a distinctive and complex flavor that is both slightly sweet and savory, with a hint of smokiness from the wood-fired cooking process.In addition to its delicious taste, roasted goat is also a nutritious and healthy source of protein. It is high in essential amino acids, vitamins, and minerals, making it a great choice for those looking for a nutrient-dense and satisfying meal.",
   },
   {
     dish: dish4,

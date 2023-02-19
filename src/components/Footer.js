@@ -1,25 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/littleLemonLogo.png";
 
 const DoormatNavigation = [
-  { text: "Home", href: "/home" },
-  { text: "About", href: "/about" },
-  { text: "Contact", href: "/contact" },
-  { text: "Reservations", href: "/reservations" },
-  { text: "Order Online", href: "/order-online" },
-  { text: "Login", href: "/login" },
+  { text: "Home", page: "/home" },
+  { text: "About", page: "/about" },
+  { text: "Contact", page: "/contact" },
+  { text: "Reservations", page: "/reservations" },
+  { text: "Order Online", page: "/booking" },
+  { text: "Login", page: "/login" },
 ];
 
 const Contact = [
-  { text: "Address", href: "/address" },
-  { text: "Phone Number", href: "/phone" },
-  { text: "Email", href: "/email" },
+  { text: "Address", page: "/address" },
+  { text: "Phone Number", page: "/phone" },
+  { text: "Email", page: "/email" },
 ];
 
 const SocialMedia = [
-  { text: "Address", href: "/address" },
-  { text: "Phone Number", href: "/phone" },
-  { text: "Email", href: "/email" },
+  { text: "Address", page: "/address" },
+  { text: "Phone Number", page: "/phone" },
+  { text: "Email", page: "/email" },
 ];
 
 function Footer() {
@@ -31,7 +32,7 @@ function Footer() {
           <h3>Doormat Navigation</h3>
           {DoormatNavigation.map((link) => (
             <li key={link.text}>
-              <a href={link.href}>{link.text}</a>
+              <Link to={link.page}>{link.text}</Link>
             </li>
           ))}
         </ul>
@@ -39,7 +40,7 @@ function Footer() {
           <h3>Contact</h3>
           {Contact.map((link) => (
             <li key={link.text}>
-              <a href={link.href}>{link.text}</a>
+              <Link to={link.page}>{link.text}</Link>
             </li>
           ))}
         </ul>
@@ -47,7 +48,7 @@ function Footer() {
           <h3>Social Media</h3>
           {SocialMedia.map((link) => (
             <li key={link.text}>
-              <a href={link.href}>{link.text}</a>
+              <Link to={link.page}>{link.text}</Link>
             </li>
           ))}
         </ul>

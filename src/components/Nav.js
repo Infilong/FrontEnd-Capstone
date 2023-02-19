@@ -6,7 +6,6 @@ const NavLinks = [
   { text: "Home", page: "/" },
   { text: "About", page: "/about" },
   { text: "Contact", page: "/contact" },
-  { text: "Reservations", page: "/reservations" },
   { text: "Order Online", page: "/booking" },
   { text: "Login", page: "/login" },
 ];
